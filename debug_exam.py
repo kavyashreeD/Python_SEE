@@ -50,7 +50,7 @@ def uniqueUpdate(data1, data2):
                 dupKeys[k] = [v1, v2]
                 # Remove (k, v1) from data1
                 del data1[k]
-            else:
+         else:
                 # Add (k, v2) to data1
                 data1[k] = v2
     # After processing all (k, v2) in
@@ -93,14 +93,14 @@ dup (the dictionary returned)
 
 import sys
 if __name__ == '__main__':
-    data1 = {}
+    data1 = {3:3,4:4}
     n1 = int(input())
     for _ in range(n1):
         k, v = map(int, input().split())
         if k in data1:
             sys.exit("Illegal: data1")
         data1[k] = v
-    data2 = []
+    data2 = [[1,2],[2,3],[3,4],[4,5]]
     n2 = int(input())
     for _ in range(n2):
         k, v = map(int, input().split())
