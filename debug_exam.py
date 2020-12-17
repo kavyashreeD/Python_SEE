@@ -26,7 +26,7 @@ key-value pair (k, [v1, v2]) should
 be added to the (initially empty)
 dictionary to be returned.
 
-In this implementation, data1 is a
+In this implementation, data1 is A
 dictionary and data2 is a list where
 each key-value pair in data2 is also
 a list [key, value] of length 2.
@@ -50,9 +50,13 @@ def uniqueUpdate(data1, data2):
                 dupKeys[k] = [v1, v2]
                 # Remove (k, v1) from data1
                 del data1[k]
-            else:
-                # Add (k, v2) to data1
-                data1[k] = v2
+        else:
+            # Add (k, v2) to data1
+            data1[k] = v2
+    # After processing all (k, v2) in
+    # data2, return the dictionary
+    return dupKeys
+                
     # After processing all (k, v2) in
     # data2, return the dictionary
     return dupKeys
